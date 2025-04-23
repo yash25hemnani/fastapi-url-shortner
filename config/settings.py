@@ -2,6 +2,10 @@ from pydantic_settings import BaseSettings
 from functools import lru_cache
 
 class Settings(BaseSettings):
+    """
+    Loads application settings from environment variables or a `.env` file.
+    """
+
     debug:bool = False
     database_url:str = ''
     database_host:str = ''
@@ -16,6 +20,10 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings():
+    """
+    Loads and returns the application settings, cached for efficiency.
+    """
+
     return Settings()
 
 settings = get_settings()
