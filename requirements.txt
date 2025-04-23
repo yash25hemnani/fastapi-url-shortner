@@ -5,3 +5,8 @@ pytest
 requests
 httpx
 pre-commit
+python-dotenv
+pydantic-settings
+psycopg2-binary
+sqlalchemy
+psycopg2
