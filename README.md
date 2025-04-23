@@ -124,6 +124,18 @@ The app will be available at `http://127.0.0.1:8000`.
 The Postgres Databased used is Aiven. 
 Create a free account and database at - `https://aiven.io/`
 
+Connect the databse to your psql CLI and create the following table - 
+
+# Database Table: urls
+```sql
+CREATE TABLE urls (
+    id SERIAL PRIMARY KEY,
+    original_url TEXT NOT NULL,
+    short_url VARCHAR(10) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 ## 🧾 Example `.env` (To connect your own aiven database)
 
 ```
