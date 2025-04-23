@@ -126,7 +126,7 @@ Create a free account and database at - `https://aiven.io/`
 
 Connect the databse to your psql CLI and create the following table - 
 
-# Database Table: urls
+### Database Table: urls
 ```sql
 CREATE TABLE urls (
     id SERIAL PRIMARY KEY,
@@ -134,11 +134,11 @@ CREATE TABLE urls (
     short_url VARCHAR(10) UNIQUE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 ## 🧾 Example `.env` (To connect your own aiven database)
 
-```
+```bash
 DATABASE_URL=postgresql://user:password@host:port/dbname
 DATABASE_HOST=pg-22571dd-somename-bd52.i.aivencloud.com
 DATABASE_PORT=12345
