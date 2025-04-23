@@ -21,7 +21,7 @@ A simple and efficient URL shortener built using **FastAPI**, **PostgreSQL**, an
 - **Uvicorn**
 
 ## Live Link
-[Link Text](https://fastapi-url-shortner.onrender.com/)
+[FastAPI URL Shortner](https://fastapi-url-shortner.onrender.com/)
 
 ## 🧪 API Endpoints
 
