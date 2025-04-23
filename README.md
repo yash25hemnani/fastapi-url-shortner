@@ -1,18 +1,16 @@
 
 # FastAPI URL Shortener
 
-# 🔗 FastAPI URL Shortener
-
 A simple and efficient URL shortener built using **FastAPI**, **PostgreSQL**, and **Docker**. This project allows you to shorten long URLs and access them via a generated short code.
 
-## 🚀 Features
+## Features
 
 - Shortens long URLs to short, shareable links
 - FastAPI-based backend for performance and ease of development
 - PostgreSQL as the database to store original and shortened URLs
 - Dockerized for easy deployment
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.12**
 - **FastAPI**
