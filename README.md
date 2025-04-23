@@ -20,7 +20,58 @@ A simple and efficient URL shortener built using **FastAPI**, **PostgreSQL**, an
 - **Docker**
 - **Uvicorn**
 
-## 📦 Installation & Setup
+## Live Link
+`https://fastapi-url-shortner.onrender.com/`
+
+## 🧪 API Endpoints
+
+| Method | Endpoint       | Description             |
+|--------|----------------|-------------------------|
+| GET    | `/`            | Welcome message         |
+| POST   | `/shorten`     | Shorten a given URL     |
+| GET    | `/{short_url}` | Redirect to original URL|
+
+### Sample POST Request - Use Curl or Postman
+
+## Curl
+```bash
+curl -X POST https://fastapi-url-shortner.onrender.com/shorten \
+     -H "Content-Type: application/json" \
+     -d '{"original_url": "https://www.example.com"}'
+```
+
+## Postman
+Endpoint:
+```http
+POST /shorten
+Content-Type: application/json
+```
+
+Request Body:
+```json
+{
+  "original_url": "https://www.example.com"
+}
+```
+
+Sample Response
+```json
+{
+  "shortend_url": "abcd1234"
+}
+```
+
+### Sample GET Request
+Paste the shortened url followed by the live link
+
+```bash
+https://fastapi-url-shortner.onrender.com/abcd1234
+```
+
+You will be redirected to your original url.
+
+
+## 📦 Installation & Setup on Local Machine
 
 ### Prerequisites
 
@@ -42,7 +93,7 @@ To run the project using Docker, follow these steps:
 
 Once the container is up and running, you can access the URL shortener at `http://0.0.0.0:8000`.
 
-## Local Installation (Using FastAPI Structure)
+## Local Installation
 To install and run the project locally, follow these steps:
 
 1. Clone the repository:
@@ -69,33 +120,20 @@ To install and run the project locally, follow these steps:
 
 The app will be available at `http://127.0.0.1:8000`.
 
-## Database Configuration
-No need to connect to a local database. The database is hosted online using **Aiven**.
+## Database Configuration (Required for both Docker and Local installation)
+The Postgres Databased used is Aiven. 
+Create a free account and database at - `https://aiven.io/`
 
-## 🧪 API Endpoints
-
-| Method | Endpoint       | Description             |
-|--------|----------------|-------------------------|
-| GET    | `/`            | Welcome message         |
-| POST   | `/shorten`     | Shorten a given URL     |
-| GET    | `/{short_url}` | Redirect to original URL|
-
-### Sample Request
-
-```http
-POST /shorten
-Content-Type: application/json
-
-{
-  "original_url": "https://www.example.com"
-}
-```
-
-## 🧾 Example `.env` (if you want to connect your own aiven database)
+## 🧾 Example `.env` (To connect your own aiven database)
 
 ```
 DATABASE_URL=postgresql://user:password@host:port/dbname
+DATABASE_HOST=pg-22571dd-somename-bd52.i.aivencloud.com
+DATABASE_PORT=12345
+DATABASE_USER=username
+DATABASE_PASSWORD=password
+DATABASE_NAME=dbname
+DATABASE_SSLMODE=require
 ```
-
 
 Enjoy using the FastAPI URL Shortener!
