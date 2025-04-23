@@ -1,5 +1,7 @@
 
 # FastAPI URL Shortener
+#### Live Link
+[GitHub Link](https://github.com/yash25hemnani/fastapi-url-shortner)
 
 A simple and efficient URL shortener built using **FastAPI**, **PostgreSQL**, and **Docker**. This project allows you to shorten long URLs and access them via a generated short code.
 
