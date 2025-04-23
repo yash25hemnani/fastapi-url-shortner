@@ -40,7 +40,7 @@ To run the project using Docker, follow these steps:
    docker run -d -p 8000:8000 yash2522hemnani/fastapi-url-shortener
    ```
 
-Once the container is up and running, you can access the URL shortener at `http://localhost:8000`.
+Once the container is up and running, you can access the URL shortener at `http://0.0.0.0:8000`.
 
 ## Local Installation (Using FastAPI Structure)
 To install and run the project locally, follow these steps:
@@ -67,7 +67,7 @@ To install and run the project locally, follow these steps:
    uvicorn app.main:app --reload
    ```
 
-The app will be available at `http://localhost:8000`.
+The app will be available at `http://127.0.0.1:8000`.
 
 ## Database Configuration
 No need to connect to a local database. The database is hosted online using **Aiven**.
