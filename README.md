@@ -29,7 +29,7 @@ A simple and efficient URL shortener built using **FastAPI**, **PostgreSQL**, an
 | POST   | `/shorten`     | Shorten a given URL     |
 | GET    | `/{short_url}` | Redirect to original URL|
 
-### Sample POST Request - Use Curl or Postman
+## Sample POST Request - Use Curl or Postman
 
 ## Curl
 ```bash
